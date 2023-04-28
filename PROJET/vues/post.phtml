@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<?php require_once "../vues/head.php" ?>
+    <body>
+    <?php require_once "../vues/header.php" ?>
+    <?php require_once "../vues/nav.php" ?>
+        <fieldset>  
+            <legend><h1>Poster un article.</h1></legend>
+                               
+        		<form method="post">
+        		    <input type="text" name="nom" placeholder="Nom" required>
+        			<textarea name="article" placeholder="Écrivez votre article"></textarea>
+        			<input type="url" name="image" placeholder="Votre image" required>
+        			<select class="choix" name="categorie">
+        			    <option value="1">Fleurs</option>
+        			    <option value="2">Légumes</option>
+        			    <option value="3">Fruits</option>
+        			</select>
+        			<button class="submit" type="submit" name="post">Poster votre article</button>
+        		</form>
+        </fieldset>
+    </body>
+    <?php require_once "footer.php" ?>
+</html>

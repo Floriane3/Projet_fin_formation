@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<?php require_once "../vues/head.php" ?>
+    <body>
+    <?php require_once "../vues/header.php" ?>
+    <?php require_once "../vues/nav.php" ?>
+        <fieldset>  
+            <legend><h1>Poster un commentaire.</h1></legend>
+                               
+        		<form method="post">
+        			<input type="text" name="pseudo" placeholder="Votre pseudo"/>
+        			<input type="text" name="comment" placeholder="Écrivez votre commentaire" required>
+        			<button class="submit" type="submit" name="commentaire">Laisser un commentaire</button>
+        		</form>
+        </fieldset>
+    </body>
+    <?php require_once "footer.php" ?>
+</html>

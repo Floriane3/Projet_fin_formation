@@ -1,0 +1,25 @@
+<!--page d'accueil de l'admin-->
+
+<!doctype html>
+<html lang="en">
+<?php require_once "../vues/head.php";?>
+<body>
+    <?php require_once "../vues/header.php"; ?>
+    <?php require_once "../vues/nav.php"; ?>
+    
+	    <fieldset> 
+            <legend><h1>Modifications Admin</h1></legend>
+                       
+    		<form method="post">
+    		    <h6>Gestion des commentaires
+    		    <button><a href="../public/index.php?action=editComs" name ="modifcom">Modifier</a></button></h6>
+    		    <h6>Gestion des posts
+    		    <button><a href="../public/index.php?action=editPosts" name ="modifpost">Modifier</a></button></h6>
+    		    <h6>Gestion des utilisateurs
+    		    <button><a href="../public/index.php?action=editUsers" name ="modifuser">Modifier</a></button></h6>
+    		    <button type="submit" name="save">Enregistrer les modifications</button>
+    		</form>
+    	</fieldset>
+	</body>
+	<?php require_once "footer.php" ?>
+</html>

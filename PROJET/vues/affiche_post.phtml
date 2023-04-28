@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<?php require_once "../vues/head.php" ?>
+    <body>
+    <?php require_once "../vues/header.php" ?>
+    <?php require_once "../vues/nav.php" ?>
+        <main>
+                <h1><?= $post->nom ?></h1>
+                    <div class = "article">
+                    <div><img class = "image" src="<?= $post->photo ?>"/></div>
+                    <article><?= $post->article ?></article>
+                </div>
+            
+            <button><a href="index.php?action=commentaireC&post=<?= $post->id ?>">laisser un commentaire</a></button>
+            <h3>Vos commentaires</h3>
+            
+            <?php foreach ($comms as $com): ?>
+            <div>
+                <p class = "pseudo"> <?php echo $com->getPseudo() ?></p>
+                <p> <?php echo $com->getCommentaire() ?></p>
+            </div>
+            <?php endforeach; ?>
+        </main>
+    <?php require_once "footer.php" ?>
+    </body>
+</html>

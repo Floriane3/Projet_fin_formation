@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<?php require_once "../vues/head.php" ?>
+    <body>
+    <?php require_once "../vues/header.php" ?>
+    <?php require_once "../vues/nav.php" ?>
+        <main>
+            <h1>Posts</h1>
+            <div class="categImage">
+            <?php
+                foreach ($posts as $post) {
+            ?>
+                <div class = "section">
+                    <div class="titre">
+                        <h2><a href="index.php?action=affiche_post&post=<?= $post->id ?>"><?= $post->nom ?></a></h2>
+                    </div>
+                    <div class="photo"><a href="index.php?action=affiche_post&post=<?= $post->id ?>">
+                        <img src="<?= $post->photo ?>"/></a>
+                    </div>
+                </div>
+                <!--<article><?/*= $post->article */?></article>-->
+           
+            <?php
+                }
+            ?> 
+            </div>
+            
+            <div class="ajoutPost"><p>Vous voulez contribuer à la richesse du site et publier votre propre article?</p> 
+            <p>Allez y c'est par ici !</p>
+            <button><a href="index.php?action=postC&categorie=<?= $categorie ?>">Ajouter un post</a></button>
+            </div>
+        </main>
+    <?php require_once "footer.php" ?>
+    </body>
+</html>
