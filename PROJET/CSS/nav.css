@@ -26,6 +26,12 @@ header {
 h1{
   font-size : 2em;
 }
+h2 {
+  font-size : 1.3em;
+}
+h3{
+  font-size : 1em;
+}
 a {
   text-decoration : none;
   color: rgba(0, 143, 122, 1); /*vert foncé*/
@@ -185,12 +191,18 @@ button {
 .pseudo{
   color : rgba(0,143,122,1); /*vert foncé*/;
   font-weight : bold;
+  margin-bottom :1em;
 }
 .adminEdit>p {
   font-weight : bold;
 }
 .adminEdit {
   padding : 1em;
+  margin : 1em;
+  border : 0.01em solid rgba(0,143,122,1); /*vert foncé*/;
+}
+.edit_art {
+  color : rgba(0,143,122,1); /*vert foncé*/;
 }
 pre {
   font-family : "Arial";
@@ -337,6 +349,7 @@ textarea {
 .error {
   color : rgba(143, 0, 92, 1); /*rouge foncé*/
   text-align : center;
+  margin-top : 1em;
 }
 
 /*************************FOOTER*******************/

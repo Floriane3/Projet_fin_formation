@@ -18,8 +18,7 @@ if(isset($_SESSION['id'])) {
         header('Location: index.php?action=accueil');
         die;
         }
-        } else {
-            echo "Vous n'êtes pas autorisé à poster, veuillez vous connecter.";
-            die;
-}
-require_once "../vues/post.phtml";
+    } 
+//si pas connecté, msg d'erreur dans affiche_post_categorie
+$template = "../vues/post.phtml";
+require_once "../vues/layout.phtml";

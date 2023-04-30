@@ -1,11 +1,5 @@
-<!doctype html>
-<html lang="fr">
-<?php require_once "../vues/head.php" ?>
-    <body>
-    <?php require_once "../vues/header.php" ?>
-    <?php require_once "../vues/nav.php" ?>
         <main>
-            <h1>Posts</h1>
+            <h2>Posts</h2>
             <div class="categImage">
             <?php
                 foreach ($posts as $post) { //pour chacun des posts qui sera ajouté
@@ -13,7 +7,7 @@
                 <div class = "section">
                     <div class="titre">
                         <!--on affiche  le titre -->
-                        <h2><a title ="titre de l'article" href="index.php?action=affiche_post&post=<?= $post->id ?>"><?= $post->nom ?></a></h2>
+                        <h3><a title ="titre de l'article" href="index.php?action=affiche_post&post=<?= $post->id ?>"><?= $post->nom ?></a></h3>
                     </div>
                         <!-- et la photo correspondante-->
                     <div class="photo"><a title ="photo en lien avec l'article" href="index.php?action=affiche_post&post=<?= $post->id ?>">
@@ -36,6 +30,4 @@
             
             </div>
         </main>
-    <?php require_once "footer.php" ?>
-    </body>
-</html>
+    

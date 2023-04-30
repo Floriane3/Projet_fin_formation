@@ -1,10 +1,4 @@
-<!doctype html>
-<html lang="fr">
-<?php require_once "../vues/head.php";?>
-    <body>
-        <?php require_once "../vues/header.php"; ?>
-        <?php require_once "../vues/nav.php"; ?>
-    
+
         <fieldset>
             <legend><h2>Modification mot de passe</h2></legend>
                 <form method="post">
@@ -19,6 +13,4 @@
         			<button class="submit" type="submit" name="registerpwd">Enregistrer</button>
                 </form>
         </fieldset>
-    </body>
-	<?php require_once "../vues/footer.php" ?>
-</html>
+    

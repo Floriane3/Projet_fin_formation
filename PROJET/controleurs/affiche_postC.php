@@ -5,4 +5,5 @@
     //recupere les commentaires
     $comms = Post::recup_commentaires($post->id);
     
-    require "../vues/affiche_post.phtml";
+    $template = "../vues/affiche_post.phtml";
+    require_once "../vues/layout.phtml";

@@ -1,14 +1,18 @@
 <?php 
 
+//charger l'utilisateur qui est connecté
 $user = User::loadFromId($_SESSION['id']);
 
+
 if (isset($_POST['save'])) {
+    //on verifie si le pseudo a été modifié, si oui on enregistre les modif
     if (isset($_POST['pseudo'])) {
         if ($_POST['pseudo'] != $user->pseudo) {
             $user->pseudo = $_POST['pseudo'];
             $user->edit_pseudo();
         }
     }
+    //on verifie si le mail a été modifié, si oui on enregistre les modif
     if (isset($_POST['email'])) {
         if ($_POST['email'] != $user->email) {
             $user->email = $_POST['email'];
@@ -29,4 +33,5 @@ if(isset($_SESSION['id'])) {
   exit;
 }
 }
-require "../vues/users/user_home.php";
+$template = "../vues/users/user_home.php";
+require_once "../vues/layout.phtml";

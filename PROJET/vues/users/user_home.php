@@ -1,10 +1,3 @@
-<!doctype html>
-<html lang="fr">
-<?php require_once "../vues/head.php" ?>
-    <body>
-    <?php require_once "../vues/header.php" ?>
-    <?php require_once "../vues/nav.php" ?>
-
         <fieldset> 
             <legend><h2>Modifier profil</h2></legend>
                        
@@ -25,6 +18,4 @@
         	</form>
         </fieldset>
 
-    </body>
-    <?php require_once "../vues/footer.php" ?>
-</html>
+    

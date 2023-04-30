@@ -1,1 +1,3 @@
-<?php require_once "../vues/home_admin.phtml";
+<?php 
+$template = "../vues/home_admin.phtml";
+require_once "../vues/layout.phtml";

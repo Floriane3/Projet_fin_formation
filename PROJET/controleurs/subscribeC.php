@@ -35,4 +35,5 @@ if (isset($_SESSION['id'])) {
     $user = new User($_SESSION['id']);
     $pseudo = $user->loadNickname();
 }
-require_once "../vues/subscribeV.php";
+$template = "subscribeV.php";
+require_once "../vues/layout.phtml";

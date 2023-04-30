@@ -6,12 +6,7 @@ if (isset($_POST['subscribe'])) {
     $errors = $subscribe->process(); // On assigne les erreurs à la variable $errors pour qu'elles soient affichées sous le formulaire
 }
 ?>
-<!doctype html>
-<html lang="fr">
-<?php require_once "head.php" ?>
-<body>
-    <?php require_once "header.php" ?>
-    <?php require_once "nav.php" ?>
+
 
 	    <fieldset> 
             <legend><h2>Inscription</h2></legend>
@@ -40,6 +35,4 @@ if (isset($_POST['subscribe'])) {
     	</fieldset>
     	
     	<div class = "form" >Vous êtes déjà inscrit ? <a title="redirection vers login" href="../public/index.php?action=loginC">Connexion</a></div>
-	</body>
-	<?php require_once "footer.php" ?>
-</html>
+	

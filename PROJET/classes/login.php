@@ -39,14 +39,15 @@ class Login {
                 die;
             }
         } else {
+            //si mdp pas bon
             $error_message = "Login ou mot de passe incorrect.";
         }
     } else {
-        // Pas réussi à charger l'utilisateur à l'aide de son mail
+        // si mail pas bon
         $error_message = "Login ou mot de passe incorrect.";
     }
 
-    // Inclure le formulaire HTML et afficher le message d'erreur si nécessaire
+    
     require_once '../vues/loginV.php';
 }
 }

@@ -1,6 +1,4 @@
 <?php
-require_once "../vues/commentaire.phtml";
-
 // Traitement des données formulaires
 if (isset($_POST['commentaire'])) {
     //creation de l'objet
@@ -19,5 +17,5 @@ if (isset($_POST['commentaire'])) {
     die;
 }
 
-?>
-
+$template = "../vues/commentaire.phtml";
+require_once "../vues/layout.phtml";
