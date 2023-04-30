@@ -1,0 +1,22 @@
+        <fieldset>  
+            <legend><h2>Poster un article.</h2></legend>
+                               
+        		<form method="post">
+        		    <label for="Nom">Titre de votre article : </label>
+        		    <input type="text" name="nom" placeholder="Titre" required/>
+        		    
+        		    <label for="article">Texte de votre article : </label>
+        			<textarea name="article" placeholder="Écrivez votre article"></textarea required>
+        			
+        			<label for="image">Lien de votre image : </label>
+        			<input type="url" name="image" placeholder="Votre image" required/>
+        			
+        			<label for="categorie">Choississez une catégorie : </label>
+        			<select class="choix" name="categorie">
+        			    <option value="1">Fleurs</option>
+        			    <option value="2">Légumes</option>
+        			    <option value="3">Fruits</option>
+        			</select required>
+        			<button class="submit" type="submit" name="post">Poster votre article</button>
+        		</form>
+        </fieldset>

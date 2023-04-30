@@ -1,0 +1,33 @@
+        <main>
+            <h2>Posts</h2>
+            <div class="categImage">
+            <?php
+                foreach ($posts as $post) { //pour chacun des posts qui sera ajouté
+            ?>
+                <div class = "section">
+                    <div class="titre">
+                        <!--on affiche  le titre -->
+                        <h3><a title ="titre de l'article" href="index.php?action=affiche_post&post=<?= $post->id ?>"><?= $post->nom ?></a></h3>
+                    </div>
+                        <!-- et la photo correspondante-->
+                    <div class="photo"><a title ="photo en lien avec l'article" href="index.php?action=affiche_post&post=<?= $post->id ?>">
+                        <img src="<?= $post->photo ?>"/></a>
+                    </div>
+                </div>
+           
+            <?php
+                }
+            ?> 
+            </div>
+            <div class="ajoutPost"><p>Vous voulez contribuer à la richesse du site et publier votre propre article?</p> 
+            <p>Allez y c'est par ici !</p>
+            <?php if(isset($_SESSION['id'])) { ?> <!--si l'utilisateur est connecté
+                                il peut ajouter un post en cliquant sur le bouton -->
+        <button><a title ="Ajouter un post" href="index.php?action=postC&categorie=<?= $categorie ?>">Ajouter un post</a></button>
+    <?php } else { ?> <!-- si il n'est pas connecté : message d'erreur-->
+        <p class="error">Vous devez être connecté pour pouvoir publier.</p>
+    <?php } ?>
+            
+            </div>
+        </main>
+    
