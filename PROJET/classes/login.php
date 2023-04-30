@@ -19,31 +19,34 @@ class Login {
     }
     
     public function process() {
-        $user = new User();
-        if ($user->loadFromMail($this->email)) {
-            // Comme le mot de passe est haché, on ne peut pas faire autrement
-            if (password_verify($this->password, $user->password)) {
-                // On met les variables de session de l'utilisateur
-                $_SESSION['id'] = $user->id;
-                if ($user->admin == true) {
-                    $_SESSION['admin'] = $user->admin;
-                }
-              
-                // Redirection selon admin ou non
-                if (isset($_SESSION['admin'])) {
-                    header('location: index.php?action=home_adminC'); 
-                    die;
-                } 
-                else if(isset($_SESSION['id'])) {
-                    header('Location: index.php');
-                    die;
-                }
-            } else {
-                echo "Login ou mot de passe incorrect ou inexistant.";
+    $user = new User();
+    if ($user->loadFromMail($this->email)) {
+        // Comme le mot de passe est haché, on ne peut pas faire autrement
+        if (password_verify($this->password, $user->password)) {
+            // On met les variables de session de l'utilisateur
+            $_SESSION['id'] = $user->id;
+            //si l'user est un admin->session admin
+            if ($user->admin == true) {
+                $_SESSION['admin'] = $user->admin;
+            }
+
+            // Redirection selon admin ou non
+            if (isset($_SESSION['admin'])) {
+                header('location: index.php?action=home_adminC'); 
+                die;
+            } else if (isset($_SESSION['id'])) {
+                header('Location: index.php');
+                die;
             }
         } else {
-            // Pas réussi à charger l'utilisateur à l'aide de son mail
-            echo "Login ou mot de passe incorrect ou inexistant.";
+            $error_message = "Login ou mot de passe incorrect.";
         }
+    } else {
+        // Pas réussi à charger l'utilisateur à l'aide de son mail
+        $error_message = "Login ou mot de passe incorrect.";
     }
+
+    // Inclure le formulaire HTML et afficher le message d'erreur si nécessaire
+    require_once '../vues/loginV.php';
+}
 }

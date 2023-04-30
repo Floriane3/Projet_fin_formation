@@ -1,22 +1,22 @@
 <!--page d'accueil de l'admin-->
 
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 <?php require_once "../vues/head.php";?>
 <body>
     <?php require_once "../vues/header.php"; ?>
     <?php require_once "../vues/nav.php"; ?>
     
 	    <fieldset> 
-            <legend><h1>Modifications Admin</h1></legend>
-                       
+            <legend><h2>Modifications Admin</h2></legend>
+            <!--l'admin peut pour le moment supprimer les commentaires, les posts et les users-->
     		<form method="post">
-    		    <h6>Gestion des commentaires
-    		    <button><a href="../public/index.php?action=editComs" name ="modifcom">Modifier</a></button></h6>
-    		    <h6>Gestion des posts
-    		    <button><a href="../public/index.php?action=editPosts" name ="modifpost">Modifier</a></button></h6>
-    		    <h6>Gestion des utilisateurs
-    		    <button><a href="../public/index.php?action=editUsers" name ="modifuser">Modifier</a></button></h6>
+    		    <label for="coms">Gestion des commentaires : </label>
+    		    <button><a title ="modifier commentaires" href="../public/index.php?action=editComs" name ="modifcom">Modifier</a></button>
+    		    <label for="posts">Gestion des posts : </label>
+    		    <button><a title ="modifier posts" href="../public/index.php?action=editPosts" name ="modifpost">Modifier</a></button>
+    		    <label for="users">Gestion des utilisateurs : </label>
+    		    <button><a title ="modifier users" href="../public/index.php?action=editUsers" name ="modifuser">Modifier</a></button>
     		    <button type="submit" name="save">Enregistrer les modifications</button>
     		</form>
     	</fieldset>

@@ -1,21 +1,24 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 <?php require_once "../vues/head.php" ?>
     <body>
     <?php require_once "../vues/header.php" ?>
     <?php require_once "../vues/nav.php" ?>
         <main>
-                <h1><?= $post->nom ?></h1>
-                    <div class = "article">
-                    <div><img class = "image" src="<?= $post->photo ?>"/></div>
+            <!--titre de l'article-->
+            <h2><?= $post->nom ?></h2>
+                <div class = "article">
+                    <!--photo et texte correspondants-->
+                    <div><img alt="photo en lien avec l\'article" class = "image" src="<?= $post->photo ?>"/></div>
                     <article><?= $post->article ?></article>
                 </div>
-            
+            <!-- l'utilisateur peut laisser un commentaire, qu'il soit connecté ou pas-->
             <button><a href="index.php?action=commentaireC&post=<?= $post->id ?>">laisser un commentaire</a></button>
-            <h3>Vos commentaires</h3>
+            <h3>Vos commentaires :</h3>
             
-            <?php foreach ($comms as $com): ?>
+            <?php foreach ($comms as $com): ?> <!--pour chacun des commentaires ajouté-->
             <div>
+                <!--on affiche le pseudo et le commentaire sur la page ou il a été écrit -->
                 <p class = "pseudo"> <?php echo $com->getPseudo() ?></p>
                 <p> <?php echo $com->getCommentaire() ?></p>
             </div>

@@ -3,31 +3,28 @@
   list-style-type : none;
 } 
 body {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position : center;
   font-family : "Quicksand";
   font-size : 1em;
   margin : 0;
-  /*background: rgb(2,146,98);
-  background: linear-gradient(360deg, rgba(2,146,98,0.4095763305322129) 0%, rgba(255,255,255,1) 100%);*/
+  background: rgb(2,146,98);
+  background: linear-gradient(320deg, rgba(2,146,98,0.4095763305322129) 0%, rgba(251,251,233,1) 100%);
   opacity : 0.8;
   width : 100%;
 }
+
 
 /***********************HEADER**********************/
 /***************************************************/
 header {
   display : flex;
   flex-direction : column;
-  justify-content : center;
   text-align : center;
   color : rgba(0, 79, 67, 1); /* vert tres foncé */
   width : 100%;
   font-family : 'Zeyada', cursive;
 }
-h1>header{
-  font-size : 0.7em;
+h1{
+  font-size : 2em;
 }
 a {
   text-decoration : none;
@@ -49,11 +46,12 @@ a {
 /***********************NAV*************************/
 /***************************************************/
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 780px) { /*mobilefirst*/
+  /*la nav se transforme en menu burger */
 #menu__toggle {
-  opacity: 0;
+  opacity: 0; /*cache la nav (checkbox)*/
 }
-#menu__toggle:checked + .menu__btn > span {
+#menu__toggle:checked + .menu__btn > span { /*rotate pour que le burger devienne une croix*/
   transform: rotate(45deg);
 }
 #menu__toggle:checked + .menu__btn > span::before {
@@ -64,9 +62,10 @@ a {
   top: 0;
   transform: rotate(90deg);
 }
-#menu__toggle:checked ~ .menu__box {
+#menu__toggle:checked ~ .menu__box { /*si on clique sur le burger, la liste menu_box s'affiche*/
   left: 0;
 }
+/* le menu burger*/
 .menu__btn {
   position: fixed;
   top: 3em;
@@ -75,8 +74,8 @@ a {
   height: 2em;
   cursor: pointer;
   z-index: 1;
-  list-style-type: none;
 }
+/*pour les traits du burger*/
 .menu__btn > span,
 .menu__btn > span::before,
 .menu__btn > span::after {
@@ -87,46 +86,43 @@ a {
   background-color: rgba(0, 79, 67, 1);/* vert tres foncé */
   transition-duration: .25s;
 }
+/*trait du milieu*/
 .menu__btn > span::before {
   content: '';
   top: 0.8em;
 }
+/*trait du bas*/
 .menu__btn > span::after {
   content: '';
   top: 1.6em;
 }
+/*liste du menu*/
 .menu__box {
-  display: block;
-  position: fixed;
-  top: 1em;
-  left: -100%;
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;/*ce qui fait que la liste se cache*/
+  width: 80%;
+  min-height: 100%;
   margin: 0;
   padding: 5em 0;
-  list-style: none;
   box-shadow: 0.2em 0.2em 0.6em rgba(0, 0, 0, .4);
   transition-duration: .25s;
-  list-style-type: none;
-  background-color : rgba(255, 255, 255, 1); /*blanc*/ 
+  background-color : rgba(215, 238, 218, 1); /*vert background*/ 
 }
+/*Les catégories du menu*/
 .menu__item {
   display: block;
-  padding: 1em 2em;
+  padding: 0.7em 2em;
   color: rgba(0,143,122,1); /*vert foncé*/
-  font-size: 1em;
   font-weight: 600;
-  text-decoration: none;
   transition-duration: .25s;
-}
-.menu__under {
-  font-size: 1em;
 }
 .menu__item:hover {
   text-decoration: none;
   color: rgba(162,210,166,1); /*vert clair hover*/
   transition: color 0.2s;
 }
+/*les souscatégories*/
 .menu__under:hover {
   text-decoration: none;
   color: rgba(162,210,166,1); /*vert clair hover*/
@@ -165,6 +161,7 @@ article{
   padding-bottom : 1em;
 }
 button {
+  font-family : "Quicksand";
   padding : 0.5em;
   margin : auto;
   margin-top : 3em;
@@ -172,7 +169,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color : rgba(255, 255, 255, 1); /*blanc*/
+  background-color : rgba(215, 238, 218, 1); /*vert background*/
   border : 0.1em solid rgba(0,143,122,1); /*vert foncé*/
   border-radius : 0.5em;
 }
@@ -252,21 +249,25 @@ fieldset{
   margin-bottom : 2em;
 }
 form {
+  display : flex;
+  flex-direction : column;
+  align-items: center;
   padding :0 0.3em;
   font-size : 1.2rem;
   color: rgba(0,143,122,1); /*vert foncé*/
 }
+
 input {
+  font-family : "Quicksand";
   display: flex;
   padding : 0.3em 0.3em;
   margin : auto;
   margin-bottom : 1em;
   font-size : 1rem;
   color: rgba(0,143,122,1); /*vert foncé*/
-  background-color : rgba(255, 255, 255, 1); /*blanc*/
+  background-color : rgba(215, 238, 218, 1); /*vert background*/
   border-color : rgba(0,143,122,1); /*vert foncé*/
   border-radius : 0.5em;
-  display : block;
   width : 80%;
 } 
 form > button {
@@ -274,7 +275,7 @@ form > button {
   padding : 0.3em 0.3em;
   font-size : 0.9rem;
   color: rgba(0,143,122,1); /*vert foncé*/
-  background-color : rgba(255, 255, 255, 1); /* blanc */
+  background-color : rgba(215, 238, 218, 1); /*vert background*/
   border-color: rgba(0,143,122,1); /*vert foncé*/
   display : block;
   border-radius : 0.5em;
@@ -282,50 +283,25 @@ form > button {
   margin : auto;
   margin-top : 3em;
   margin-bottom : 1em;
-  
 }
-h6 button {
-  border-radius : 0.5em;
-  display : block;
-  width : 35%;
-  padding : 0.3em 0.3em;
-  font-size : 0.9rem;
-  color: rgba(0,143,122,1); /*vert foncé*/
-  background-color : rgba(255, 255, 255, 1); /* blanc */
-  border-color: rgba(0,143,122,1); /*vert foncé*/
-  border-radius : 0.5em;
-  margin-top : 1em;
-  margin-bottom : 0.5em;
-  margin-left : 1em;
-}
+
 button:hover {
   text-decoration: none;
+  background-color: rgba(162,210,166,1); /*vert clair hover*/
+  
 }
 .form {
   text-align : center;
   margin-bottom : 2em;
 }
-h6{
-  font-size : 1rem;
-  letter-spacing : 1px;
-  margin : 1em 1em;
-}
-h6 input {
-  border-radius : 0.5em;
-  display : block;
-  padding : 0.3em 0.3em;
-  margin-top : 1em;
-  margin-bottom : 0.5em;
-  margin-left : 1em;
-}
+
 textarea {
-  font-size : 0.8rem;
-  letter-spacing : 1px;
-  padding : 1em;
+  font-family : "Quicksand";
+  font-size : 1rem;
+  background-color : rgba(215, 238, 218, 1); /*vert background*/
   margin : auto;
   margin-bottom : 1em;
   width : 80%;
-  line-height : 1.5;
   border-radius : 5px;
   border : 0.1em solid rgba(0,143,122,1); /*vert foncé*/
   border-width: 2px;
@@ -334,8 +310,10 @@ textarea {
   display : block;
 }
 .choix {
+  font-family : "Quicksand";
   font-size : 1rem;
   color : rgb(118, 118, 118);
+  background-color : rgba(215, 238, 218, 1); /*vert background*/
   letter-spacing : 1px;
   padding : 0.3em;
   margin : auto;
@@ -349,10 +327,16 @@ textarea {
   border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
   display : block
 }
+/*suppression de compte*/
 .warning {
-  color : rgba(143, 0, 92, 1);
-  border-color : rgba(143, 0, 92, 1);
+  color : rgba(143, 0, 92, 1); /*rouge foncé*/
+  border-color : rgba(143, 0, 92, 1); /*rouge foncé*/
   margin-bottom : 0;
+}
+/*message d'erreur post*/
+.error {
+  color : rgba(143, 0, 92, 1); /*rouge foncé*/
+  text-align : center;
 }
 
 /*************************FOOTER*******************/
@@ -399,7 +383,7 @@ RESPONSIVE
     margin : auto;
   }
   h1{
-    font-size : 1.5em;
+    font-size : 2em;
   }
   /***************nav****************/
   #menu__toggle {
@@ -415,7 +399,7 @@ RESPONSIVE
   	margin: 0;
   	padding: 0;
   	list-style-type: none;
-  	color: #fff;
+  	color : rgba(255, 255, 255, 1); /* blanc */
     text-align: center;
   }
   .hamburger-menu a {
@@ -440,7 +424,7 @@ RESPONSIVE
   .hamburger-menu > ul > li ul {
   	position: absolute;
   	display: none;
-  	background-color : rgba(255, 255, 255, 1); /* blanc */
+  	background-color : rgba(215, 238, 218, 1); /*vert background*/
   	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   }
   .hamburger-menu > ul > li:hover ul {
@@ -475,7 +459,7 @@ RESPONSIVE
     margin-bottom : 1em;
     font-size : 1rem;
     color: rgba(0,143,122,1); /*vert foncé*/
-    background-color : rgba(255, 255, 255, 1); /*blanc*/
+    background-color : rgba(215, 238, 218, 1); /*vert background*/
     border-color : rgba(0,143,122,1); /*very foncé*/
     border-radius : 0.5em;
     display : block;
@@ -486,7 +470,7 @@ RESPONSIVE
     padding : 0.3em 0.3em;
     font-size : 0.9rem;
     color: rgba(0,143,122,1); /*vert foncé*/
-    background-color : rgba(255, 255, 255, 1); /* blanc */
+    background-color : rgba(215, 238, 218, 1); /*vert background*/
     border-color: rgba(0,143,122,1); /*vert foncé*/
     display : block;
     border-radius : 0.5em;
@@ -495,20 +479,6 @@ RESPONSIVE
     margin-top : 2em;
     margin-bottom : 1em;
   }
-  h6 button {
-    border-radius : 0.5em;
-    display : block;
-    width : 35%;
-    padding : 0.3em 0.3em;
-    font-size : 0.9rem;
-    color: rgba(0,143,122,1); /*vert foncé*/
-    background-color : rgba(255, 255, 255, 1); /* blanc */
-    border-color: rgba(0,143,122,1); /*vert foncé*/
-    border-radius : 0.5em;
-    margin-top : 1em;
-    margin-bottom : 0.5em;
-    margin-left : 2em;
-  }
   button:hover {
     text-decoration: none;
   }
@@ -516,14 +486,6 @@ RESPONSIVE
     font-size : 1rem;
     letter-spacing : 1px;
     margin-left : 1em 1em;
-  }
-  h6 input {
-    border-radius : 0.5em;
-    display : block;
-    padding : 0.3em 0.3em;
-    margin-top : 1em;
-    margin-bottom : 0.5em;
-    margin-left : 2em;
   }
   .form {
     text-align : center;
@@ -633,14 +595,11 @@ RESPONSIVE
     height: 13em;
     }
   .logo {
-    padding-left: 4em;
-    padding-right: 2em;
-    width : 100%;
+    display : flex;
     flex-direction: row;
-    margin : auto;
   }
-  .logo h1{
-    font-size : 3.5em;
+  h1{
+    font-size : 5em;
   }
   /***************nav*******************/
   #menu__toggle {
@@ -678,7 +637,7 @@ RESPONSIVE
   .hamburger-menu > ul > li ul {
   	position: absolute;
   	display: none;
-  	background-color : rgba(255, 255, 255, 1); /* blanc */
+  	background-color : rgba(215, 238, 218, 1); /*vert background*/
   	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   }
   .hamburger-menu > ul > li:hover ul {
@@ -713,7 +672,7 @@ RESPONSIVE
     margin-bottom : 1em;
     font-size : 1rem;
     color: rgba(0,143,122,1); /*vert foncé*/
-    background-color : rgba(255, 255, 255, 1); /*blanc*/
+    background-color : rgba(215, 238, 218, 1); /*vert background*/
     border-color : rgba(0,143,122,1); /*very foncé*/
     border-radius : 0.5em;
     display : block;
@@ -724,7 +683,7 @@ RESPONSIVE
     padding : 0.3em 0.3em;
     font-size : 0.9rem;
     color: rgba(0,143,122,1); /*vert foncé*/
-    background-color : rgba(255, 255, 255, 1); /* blanc */
+    background-color : rgba(215, 238, 218, 1); /*vert background*/
     border-color: rgba(0,143,122,1); /*vert foncé*/
     display : block;
     border-radius : 0.5em;
@@ -733,20 +692,7 @@ RESPONSIVE
     margin-top : 3em;
     margin-bottom : 1em;
   }
-  h6 button {
-    border-radius : 0.5em;
-    display : block;
-    width : 35%;
-    padding : 0.3em 0.3em;
-    font-size : 0.9rem;
-    color: rgba(0,143,122,1); /*vert foncé*/
-    background-color : rgba(255, 255, 255, 1); /* blanc */
-    border-color: rgba(0,143,122,1); /*vert foncé*/
-    border-radius : 0.5em;
-    margin-top : 1em;
-    margin-bottom : 0.5em;
-    margin-left : 3.6em;
-  }
+  
   button:hover {
     text-decoration: none;
   }
@@ -777,25 +723,33 @@ RESPONSIVE
     flex-direction : row;
     width : 100%;
   } 
-  /*img {
-    max-width : 100%;
-    object-fit: cover;
-  }*/
   article{
     margin : 0 1em;
     text-align : left;
   }
+  /*********affiche post categorie*****/
   .categImage {
     display : flex;
     flex-wrap : wrap;
     justify-content: center;
     align-items: center;
     gap : 3em;
-    /*margin : 1em;
-    padding : 1em;*/
   }
   .ajoutPost {
     padding :1em;
+  }
+  
+  /*******affiche post******/
+  .article {
+    display : flex;
+    flex-direction : row;
+    width : 90%;
+    margin : auto;
+  }
+  .image {
+    width : 18em;
+    height : 18em;
+    object-fit: cover;
   }
    /***************slider**************/
   #slider {

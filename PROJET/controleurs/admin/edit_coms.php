@@ -14,6 +14,7 @@ for ($i = 0; $i<count($edit); $i++) {
         <p>Commentaire : <pre><?= $edit[$i]['commentaire'] ?></pre></p>
         <a href="?action=deleteComs&id=<?= $edit[$i]['id'] ?>">Supprimer le commentaire</a>
     </div>
+    
 <?php
     }
 } else { 

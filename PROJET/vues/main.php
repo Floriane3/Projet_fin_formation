@@ -9,10 +9,10 @@
             <p>Offrir à nos animaux locaux une source de nourriture et d’abri adaptée.</p>
         
         <h2 class="parent">Catégories</h2>
-        
-            <a href="index.php?action=affiche_categorie&categorie=1" class="categorie1"><h3>Les plantes fleuries</h3></a>
+         <!--bref descriptif des différentes catégories avec lien sur titre et sur photo vers la catégorie correspondante-->
+            <a title ="accueil lien catégorie fleurs" href="index.php?action=affiche_categorie&categorie=1" class="categorie1"><h3>Les plantes fleuries</h3></a>
                 <section>
-                    <a href="index.php?action=affiche_categorie&categorie=1">
+                    <a title ="image lien catégorie fleurs" href="index.php?action=affiche_categorie&categorie=1">
                         <img src="../public/slider/Hortensia3.jpg" alt ="plant d'hortensias bleu et rose"></img>
                     </a>
                     <article>Les fleurs de Bretagne s’adaptent parfaitement à leur environnement ; 
@@ -23,9 +23,9 @@
                     </article>
                 </section>
             
-            <a href="index.php?action=affiche_categorie&categorie=2" class="categorie2"><h3>Les légumes</h3></a>
+            <a title ="accueil lien catégorie légumes" href="index.php?action=affiche_categorie&categorie=2" class="categorie2"><h3>Les légumes</h3></a>
                 <section>
-                    <a href="index.php?action=affiche_categorie&categorie=2">
+                    <a title ="image lien catégorie légumes" href="index.php?action=affiche_categorie&categorie=2">
                         <img src="../public/slider/chou6.jpg" alt ="un chou gros plan"></img>
                     </a>
                     <article>Les trois difficultés majeures en Bretagne sont la pluie, le vent ainsi que la terre lourde et humide.
@@ -38,9 +38,9 @@
                 </section>
             
             
-            <a href= "index.php?action=affiche_categorie&categorie=3" class="categorie3"><h3>Les fruitiers</h3></a>
+            <a title ="accueil lien catégorie fruitiers" href= "index.php?action=affiche_categorie&categorie=3" class="categorie3"><h3>Les fruitiers</h3></a>
                 <section>
-                    <a href= "index.php?action=affiche_categorie&categorie=3">
+                    <a title ="image lien catégorie fruitiers" href= "index.php?action=affiche_categorie&categorie=3">
                         <img src="../public/slider/pommier1.jpg" alt = "un pommier en fleurs"></img>
                     </a>
                     <article>Dans la belle Bretagne , nombreuses sont les variétés d’ arbres fruitiers : 
@@ -52,7 +52,9 @@
                     </article>
                 </section>
                 <div>
+                    
                     <h4>Pour le plaisir, quelques jolies photos</h4>
+                    <!--slider de quelques photos en lien avec le site-->
                     <div id="slider">
                         <img class="slide" src="../public/slider/Armerie2.jpg" alt="Végétation de Bretagne" id="slide">
                         <div id="precedent" onclick="ChangeSlide(-1)"><</div>
