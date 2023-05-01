@@ -6,7 +6,7 @@
         	<title>Jardin local</title>
         	<meta name ="description" content ="Jardin local vous propose des idées et des conseils pour jardiner et cultiver en finistère">
         	<!-- logo présent sur l'onglet du navigateur-->
-        	<link rel="shortcut icon" href="../public/moonOnglet.png" type="image/x-icon"/>
+        	<link rel="shortcut icon" href="../public/lighthouse.png" type="image/x-icon"/>
         	
         	<link rel="stylesheet" href="../CSS/nav.css" type="text/css" />
         	<script type="text/javascript" src="../JS/slider.js"></script>

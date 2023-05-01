@@ -5,10 +5,10 @@
 	$cat_fruits = Post::recup_posts_categorie(3);
 
 ?>
-<div class="hamburger-menu">
+<div class="burger-menu">
 	
-    <input id="menu__toggle" type="checkbox" />
-    <label class="menu__btn" for="menu__toggle">
+    <input id="menu__bascule" type="checkbox" />
+    <label class="menu__btn" for="menu__bascule">
       <span></span>
     </label>
 
