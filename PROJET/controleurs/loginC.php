@@ -7,6 +7,5 @@ if (isset($_POST['login'])) {
     //sauver
     $login->process();
 }
-
 $template = "loginV.php";
 require_once "../vues/layout.phtml";

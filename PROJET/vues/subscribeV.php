@@ -7,7 +7,6 @@ if (isset($_POST['subscribe'])) {
 }
 ?>
 
-
 	    <fieldset> 
             <legend><h2>Inscription</h2></legend>
                        

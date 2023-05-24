@@ -7,8 +7,13 @@
                     <div><img alt="photo en lien avec l\'article" class = "image" src="<?= $post->photo ?>"/></div>
                     <article><?= $post->article ?></article>
                 </div>
-            <!-- l'utilisateur peut laisser un commentaire, qu'il soit connecté ou pas-->
+            <?php if(isset($_SESSION['id'])) { ?> <!--si l'utilisateur est connecté
+                                il peut ajouter un commentaire en cliquant sur le bouton -->
             <button><a href="index.php?action=commentaireC&post=<?= $post->id ?>">laisser un commentaire</a></button>
+            <?php } else { ?> <!-- si il n'est pas connecté : message d'erreur-->
+        <p class="error">Vous devez être connecté pour pouvoir commenter.</p>
+    <?php } ?>
+            
             <h3>Vos commentaires :</h3>
             
             <?php foreach ($comms as $com): ?> <!--pour chacun des commentaires ajouté-->

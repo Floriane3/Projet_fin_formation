@@ -1,5 +1,4 @@
-
-    <fieldset> 
+   <fieldset> 
         <legend><h2>Identification</h2></legend>
                        
         <form method="post">

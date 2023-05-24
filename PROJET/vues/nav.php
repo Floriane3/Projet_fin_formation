@@ -76,7 +76,7 @@
 				// si la personne connectée est admin, sous catégorie modifications admin dans la nav. 
 						if(isset($_SESSION['admin'])) {
 				?>
-						<li><a class="menu__under" title ="sous nav admin" href="../public/index.php?action=home_adminC">Modification Admin</a></li>
+						<li><a class="menu__under" title ="sous nav admin" href="../public/index.php?action=home_adminC">Gestion Admin</a></li>
 				<?php
 						}
 					} else { ?>

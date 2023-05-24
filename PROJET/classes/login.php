@@ -47,7 +47,6 @@ class Login {
         $error_message = "Login ou mot de passe incorrect.";
     }
 
-    
     require_once '../vues/loginV.php';
 }
 }

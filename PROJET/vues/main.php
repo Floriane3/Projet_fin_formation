@@ -4,9 +4,9 @@
         avec respect de la nature, des saisons et de la météo.</p>
         <h3>Pourquoi favoriser des plantes locales ?</h3>
             <p>Se faciliter la vie au jardin : une plante adaptée à nos terroirs nécessitera moins d’entretien (arrosage, protection hivernale…) et donc plus de temps libre pour vous !</p>
-            <p>Diminuer les risques de maladie : une plante adaptée à nos terroirs est robuste et résiste mieux aux maladies et insectes ravageurs.</p>
+            <p>Diminuer les risques de maladies : une plante adaptée à nos terroirs est robuste et résiste mieux aux maladies et insectes ravageurs.</p>
             <p>Préserver notre patrimoine végétal historique et nos paysages identitaires.</p>
-            <p>Offrir à nos animaux locaux une source de nourriture et d’abri adaptée.</p>
+            <p>Offrir à nos animaux locaux une source de nourriture et d’abris adaptés.</p>
         
         <h2 class="parent">Catégories</h2>
          <!--bref descriptif des différentes catégories avec lien sur titre et sur photo vers la catégorie correspondante-->
